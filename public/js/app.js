@@ -37,7 +37,7 @@ weatherForm.addEventListener('submit', (event) => {
                     weatherIcon.className = "wi wi-day-cloudy"
                 }
                 locationElement.textContent = data.cityName;
-                tempElement.textContent = (data.temperature - 273.5).toFixed(2) + String.fromCharCode(176);
+                tempElement.textContent = (((data.temperature - 273.5) * 1.8) + 32).toFixed(1) + String.fromCharCode(176);
                 weatherCondition.textContent = data.description.toUpperCase();
             }
         }) 
